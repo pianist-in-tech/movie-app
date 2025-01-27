@@ -15,5 +15,10 @@ module.exports = {
         ],
     },
     plugins: [htmlPlugin],
+    devServer: {
+        port: 8080, // Use any available port
+        open: true, // Automatically open browser
+        static: './dist', // Serve files from dist folder
+    }
 };
 
