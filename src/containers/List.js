@@ -27,8 +27,17 @@ async componentDidMount(){
     if(loading){
         return <div>Loading...</div>
     }
-    return data.map(movie => <Card key={movie.id} movie={movie} />);
+//set the grid to display the Card components, which display the movie information
+    return (
+        <div class='row'>
+        {data.map(movie => 
+        <div class='col-sm-2'>
+        <Card key={movie.id} movie={movie} />
+        </div>
+        )}
+        </div>
+        );
 }
-};
+}
 
 export default List;
