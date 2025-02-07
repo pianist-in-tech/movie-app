@@ -12,6 +12,7 @@ module.exports = {
                     loader:'"babel-loader',
                 },
             },
+            //adding loaders
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
@@ -22,7 +23,4 @@ module.exports = {
     devServer: {
         port: 8080, // Use any available port
         open: true, // Automatically open browser
-        static: './dist', // Serve files from dist folder
-    }
-};
-
+        static: './dist', // Serve file
