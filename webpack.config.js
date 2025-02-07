@@ -8,10 +8,8 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader:'"babel-loader',
+                use: ['babel-loader','eslint-loader']
                 },
-            },
             //adding loaders
             {
                 test: /\.css$/,
@@ -23,4 +21,7 @@ module.exports = {
     devServer: {
         port: 8080, // Use any available port
         open: true, // Automatically open browser
-        static: './dist', // Serve file
+        static: './dist', // Serve files from dist folder
+    }
+};
+
